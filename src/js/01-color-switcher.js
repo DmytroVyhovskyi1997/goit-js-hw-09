@@ -16,9 +16,9 @@ function getRandomHexColor() {
         body.style.color = getRandomHexColor();
     },1000) ;
     btnStart.disabled = true;
-  })
+  });
 
   btnStop.addEventListener('click', () => {
     clearInterval(timerId) ;
     btnStart.disabled = false;
-  })
+  });
