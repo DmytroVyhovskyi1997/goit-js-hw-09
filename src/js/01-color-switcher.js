@@ -20,6 +20,5 @@ function getRandomHexColor() {
 
   btnStop.addEventListener('click', () => {
     clearInterval(timerId) ;
-    body.style.color = getRandomHexColor();
     btnStart.disabled = false;
   });
