@@ -6,7 +6,7 @@ const amount = document.querySelector('input[name="amount"]');
 const btnPromise = document.querySelector('button[type="submit"]');
 
 function createPromise(position, delay) {
-  const DELEY = 1000;
+  
   const promise = new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
 
@@ -16,7 +16,7 @@ function createPromise(position, delay) {
     } else {
     reject({position, delay})
     }
-  }, DELEY);
+  }, delay);
   });
   
 return promise;
