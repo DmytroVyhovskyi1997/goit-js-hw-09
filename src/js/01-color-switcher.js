@@ -15,10 +15,13 @@ function getRandomHexColor() {
         body.style.backgroundColor = getRandomHexColor();
         body.style.color = getRandomHexColor();
     },1000) ;
+    btnStop.disabled = false;
     btnStart.disabled = true;
+   
   });
 
   btnStop.addEventListener('click', () => {
     clearInterval(timerId) ;
     btnStart.disabled = false;
+    btnStop.disabled = true;
   });
