@@ -14,14 +14,23 @@ function getRandomHexColor() {
     timerId = setInterval(()=>{
         body.style.backgroundColor = getRandomHexColor();
         body.style.color = getRandomHexColor();
+        onStart(false,true)
     },1000) ;
-    btnStop.disabled = false;
-    btnStart.disabled = true;
+    
    
   });
 
   btnStop.addEventListener('click', () => {
     clearInterval(timerId) ;
+    onStop(true,false)
+  });
+
+  function onStart(){
+    btnStop.disabled = false;
+    btnStart.disabled = true;
+  }
+
+  function onStop(){
     btnStart.disabled = false;
     btnStop.disabled = true;
-  });
+  }
